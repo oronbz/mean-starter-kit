@@ -4,4 +4,6 @@ still work in progress...
 
 TODO:
 
-Complete authentication.
+1. complete authentication.
+2. add documentation
+
