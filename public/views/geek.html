@@ -1,0 +1,23 @@
+<div class="jumbotron text-center">
+	<h1>Geek City</h1>
+
+	<div class="row">
+		<div class="col-sm-6 col-sm-offset-3">
+			<p ng-show="geeks">Geek list (click to remove)</p>
+			<div class="list-group">
+				<a href ng-click="delete(geek)" ng-repeat="geek in geeks" class="list-group-item">{{geek.name}}</a>
+			</div>
+
+			<form ng-submit="create(formData)">
+				<legend>Create a geek</legend>
+				<div class="form-group">
+					<label for="name">Geek name</label>
+					<input type="text" class="form-control" name="name" placeholder="geek name" ng-model="formData.name" required>
+				</div>	
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+		
+	</div>
+
+</div>
