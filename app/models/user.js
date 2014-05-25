@@ -34,4 +34,4 @@ exports.createDefaultUser = function() {
   })
 };
 
-exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('User', userSchema);

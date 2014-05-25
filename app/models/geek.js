@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
-var geekSchema = new mongoose.Schema({
+var geekSchema = mongoose.Schema({
 	name: String
 });
 
-exports = mongoose.model('Geek', geekSchema);
+module.exports = mongoose.model('Geek', geekSchema);

@@ -1,6 +1,7 @@
 // modules ================================================
 var express = require('express');
 var session = require('express-session');
+var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var morgan = require('morgan'); // replaces express.logger
 var app = express();
@@ -16,6 +17,7 @@ mongoose.connect(db.url);
 app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev'));
 app.use(bodyParser());
+app.use(cookieParser());
 app.use(session({secret: 'pink fluffy unicorns'}));
 app.use(passport.initialize());
 app.use(passport.session());
